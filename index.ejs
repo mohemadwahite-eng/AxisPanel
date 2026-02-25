@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="form-header">
+            <h1>AI Resume Builder & Cover Letter Writer</h1>
+            <p class="subtitle">Create a professional resume and cover letter with ease.</p>
+        </header>
+        
+        <form action="/generate-resume" method="POST" enctype="multipart/form-data" class="resume-form">
+            <section class="form-section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="address" placeholder="Enter your address (Optional)">
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="form-group">
+                    <textarea name="summary" placeholder="Write a brief professional summary (3-4 sentences)" rows="4"></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="form-group">
+                    <textarea name="experience" placeholder="List your work experience (Company, Position, Duration, Responsibilities)" rows="6" required></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2 class="section-title">Education</h2>
+                <div class="form-group">
+                    <textarea name="education" placeholder="Describe your educational background (Degree, Institution, Year)" rows="4" required></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2 class="section-title">Skills</h2>
+                <div class="form-group">
+                    <textarea name="skills" placeholder="List your key skills (Technical, Soft Skills, etc.)" rows="4" required></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2 class="section-title">Additional Information</h2>
+                <div class="form-group">
+                    <textarea name="additional" placeholder="Add certifications, projects, languages, etc. (Optional)" rows="4"></textarea>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2 class="section-title">Upload Existing Resume (Optional)</h2>
+                <div class="form-group">
+                    <input type="file" name="resumeFile" accept=".pdf,.doc,.docx">
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn primary">Generate Resume</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
